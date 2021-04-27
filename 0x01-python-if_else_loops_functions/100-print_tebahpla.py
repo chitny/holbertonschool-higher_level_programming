@@ -4,4 +4,4 @@ for x in range(122, 96, -1):
         x= chr(x)
     else:
         x=chr(x).upper()
-    print(x, end="")
+    print("{}".format(x), end="")
