@@ -11,4 +11,4 @@ if a < b:
 else
 return sub(a, b)
 
-return
+return 0
