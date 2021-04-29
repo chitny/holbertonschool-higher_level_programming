@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-exit("{:s}".format("#pythoniscool"))
+exit("{}".format("#pythoniscool"))
