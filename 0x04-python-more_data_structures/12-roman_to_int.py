@@ -21,5 +21,5 @@ def roman_to_int(roman_string):
             else:
                 x = roman_string[i]
                 z = roman_dict.get(x)
-                result = result -z
+                result = result - z
     return result
