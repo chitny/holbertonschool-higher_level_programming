@@ -13,15 +13,9 @@ def roman_to_int(roman_string):
 
     for i in range(len(roman_string)):
         if i + 1 == len(roman_string):
-            x = roman_string[i]
-            z = roman_dict.get(x)
-            result = result + z
+            result += roman_dict. get(roman_string[i])
         elif roman_dict.get(roman_string[i]) >= roman_dict.get(roman_string[i + 1]):
-            x = roman_string[i]
-            z = roman_dict.get(x)
-            result = result + z
+            result += roman_dict. get(roman_string[i])
         else:
-            x = roman_string[i]
-            z = roman_dict.get(x)
-            result = result - z
+            result -= roman_dict. get(roman_string[i])
     return result
