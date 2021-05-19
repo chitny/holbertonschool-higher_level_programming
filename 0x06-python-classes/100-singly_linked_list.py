@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-"""
-"""
+"""Represents an square."""
 
 
 class Node:
+    """Represents an square."""
+
     def __init__(self, data, next_node=None):
         self.data = data
         self.next_node = next_node
@@ -30,6 +31,8 @@ class Node:
 
 
 class SinglyLinkedList:
+    """Represents an square."""
+
     def __init__(self):
         self.__head = None
 
