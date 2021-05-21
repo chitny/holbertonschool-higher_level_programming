@@ -6,25 +6,34 @@ Divides all elements of a matrix
 """
 
 
-from typing import Type
-
-
-def matrix_divided(matrix, div)::
+def matrix_divided(matrix, div):
     """descripcion de la funcion,
     lo que hace y para que sirve
     """
-    for i in matrix[]:
+    new_matrix = []
+    error8 = "matrix must be a matrix (list of lists) of integers/floats"
 
-    if matrix[0][0] != matrix[0][1]:
-        raise TypeError("Each row of the matrix must have the same size")
+    if not matrix or matrix is [[]] or matrix is None:
+        raise TypeError(error8)
 
     if type(div) is not int and type(div) is not float:
         raise TypeError("div must be a number")
     if div == 0:
         raise ZeroDivisionError("division by zero")
 
+    if matrix[0]:
+        length = len(matrix[0])
+    else:
+        raise TypeError(error8)
+    
+    for i in range(len(matrix)):
+        if len(matrix[i]) is not length:
+            raise TypeError("Each row of the matrix must have the same size")
+        new_matrix.append([])
+        for j in matrix[i]:
+            if type(j) is int or type(j) is float:
+                new_matrix[i].append(round(j / div, 2))
+            else:
+                raise TypeError(error8)
+   
     return new_matrix
-
-
-matrix must be a list of lists of integers or floats, otherwise raise a TypeError exception with the message matrix must be a matrix(list of lists) of integers/floats
-All elements of the matrix should be divided by div, rounded to 2 decimal places
