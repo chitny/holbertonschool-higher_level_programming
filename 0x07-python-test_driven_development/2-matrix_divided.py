@@ -25,7 +25,7 @@ def matrix_divided(matrix, div):
         length = len(matrix[0])
     else:
         raise TypeError(error8)
-    
+
     for i in range(len(matrix)):
         if len(matrix[i]) is not length:
             raise TypeError("Each row of the matrix must have the same size")
@@ -35,5 +35,5 @@ def matrix_divided(matrix, div):
                 new_matrix[i].append(round(j / div, 2))
             else:
                 raise TypeError(error8)
-   
+
     return new_matrix
