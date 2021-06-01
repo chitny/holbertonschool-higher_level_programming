@@ -1,0 +1,57 @@
+=============================
+The ``1-my_list`` module
+=============================
+
+Using ``MyList``
+---------------------
+
+Import the class:
+
+    >>> MyList = __import__('1-my_list').MyList
+
+Now test it:
+
+    >>> my_list = MyList()
+
+    >>> my_list
+    []
+
+    >>> my_list.append(1)
+
+    >>> my_list.append(4)
+
+    >>> my_list.append(2)
+    
+    >>> my_list.append(3)
+
+    >>> my_list.append(5)
+
+    >>> my_list
+    [1, 4, 2, 3, 5]
+
+    >>> my_list.print_sorted()
+    [1, 2, 3, 4, 5]
+
+    >>> my_list
+    [1, 4, 2, 3, 5]
+
+    >>> my_list = MyList([13, 18, 27])
+
+    >>> my_list
+    [13, 18, 27]
+
+    >>> my_list.print_sorted()
+    [13, 18, 27]
+
+    >>> my_list = MyList("holberton")
+    
+    >>> my_list
+    ['h', 'o', 'l', 'b', 'e', 'r', 't', 'o', 'n']
+
+    >>> my_list.print_sorted()
+    ['b', 'e', 'h', 'l', 'n', 'o', 'o', 'r', 't']
+
+    >>> listavacia = MyList()
+
+    >>> listavacia.print_sorted()
+    []
