@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Name of the class"""
 
+
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
@@ -14,7 +15,7 @@ class Rectangle(BaseGeometry):
         self.__width = width
         self.__height = height
 
-    def area():
+    def area(self):
         """never forget description"""
         return self.__width * self.__height
 
