@@ -69,3 +69,7 @@ Now test it:
     Traceback (most recent call last):
     TypeError: age must be an integer
     
+    >>> bg.area(pep8)
+    Traceback (most recent call last):
+    NameError: name 'pep8' is not defined
+    
