@@ -1,17 +1,9 @@
 #!/usr/bin/python3
-"""
-Module: nombre
-Descripcion del modulo
-
-"""
-
+""" class Student """
 import json
 
 
 def save_to_json_file(my_obj, filename):
-    """descripcion de la funcion,
-    lo que hace y para que sirve
-    """
-    with open(filename, mode="w+", encoding="utf-8") as myfile:
-        json.dump(my_obj, myfile)
-    return
+    """ class Student """
+    with open(filename, "w") as file:
+        file.write(json.dumps(my_obj))
