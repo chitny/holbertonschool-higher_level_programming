@@ -1,5 +1,5 @@
 =============================
-The ``1-base_geometry`` module
+The ``7-base_geometry`` module
 =============================
 
 Using ``BaseGeometry``
@@ -7,7 +7,7 @@ Using ``BaseGeometry``
 
 Import the class:
 
-    >>> MyList = __import__('1-base_geometry').BaseGeometry
+    >>> BaseGeometry s= __import__('7-base_geometry').BaseGeometry
 
 Now test it:
 
@@ -66,33 +66,4 @@ Now test it:
     ... except Exception as e:
     ...     print("[{}] {}".format(e.__class__.__name__, e))
     [TypeError] name must be an integer
-
-    >>> try:
-    ...     bg.integer_validator("age", 0)
-    ... except Exception as e:
-    ...     print("[{}] {}".format(e.__class__.__name__, e))
-    [ValueError] age must be greater than 0
-
-    >>> try:
-    ...     bg.integer_validator("distance", -4)
-    ... except Exception as e:
-    ...     print("[{}] {}".format(e.__class__.__name__, e))
-    [ValueError] distance must be greater than 0
-
-
-    >>> bg.area()
-    Traceback (most recent call last):
-    Exception: area() is not implemented
-
-    >>> bg.integer_validator("age")
-    Traceback (most recent call last):
-    TypeError: integer_validator() missing 1 required positional argument: 'value'
-
-    >>> bg.integer_validator()
-    Traceback (most recent call last):
-    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
-
-    >>> bg.integer_validator("Hello", 7, 8)
-    Traceback (most recent call last):
-    TypeError: integer_validator() takes 3 positional arguments but 4 were given
-    
+  
