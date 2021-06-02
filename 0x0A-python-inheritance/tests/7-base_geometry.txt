@@ -60,3 +60,8 @@ Now test it:
     >>> bg.integer_validator(,)
     Traceback (most recent call last):
     SyntaxError: invalid syntax
+
+    >>> bg.integer_validator(age,)
+    Traceback (most recent call last):
+    NameError: name 'age' is not defined
+    
