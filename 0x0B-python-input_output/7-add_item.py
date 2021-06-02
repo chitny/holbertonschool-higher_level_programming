@@ -5,8 +5,23 @@
 import json
 import os.path
 import sys
-save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
-load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
+
+
+def save_to_json_file(my_obj, filename):
+    """descripcion de la funcion,
+    lo que hace y para que sirve
+    """
+    with open(filename, mode="w+") as myfile:
+        json.dump(my_obj, myfile)
+
+
+def load_from_json_file(filename):
+    """descripcion de la funcion,
+    lo que hace y para que sirve
+    """
+    with open(filename, mode="r", encoding="utf-8") as myfile:
+        return (json.load(myfile))
+
 
 if (os.path.isfile("add_item.json")):
     my_list = load_from_json_file("add_item.json")
