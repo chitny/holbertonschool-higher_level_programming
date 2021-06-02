@@ -12,12 +12,13 @@ load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
 myfile = 'add_item.json'
 
-mylist = []
 
 if (path.exists(myfile)):
     mylist = load_from_json_file(myfile)
+else:
+    mylist = []
 
-for element in range(1, len(argv)):
-    mylist.append(argv[element])
+for i in range(1, len(argv)):
+    mylist.append(argv[i])
 
 save_to_json_file(mylist, myfile)
