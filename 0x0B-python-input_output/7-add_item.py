@@ -1,24 +1,21 @@
 #!/usr/bin/python3
-"""descripcion de la funcion,
-    lo que hace y para que sirve
-    """
+"""
+function that reads a text file (UTF8) and prints it to stdout
+"""
 
-import sys
+
 import json
-import os.path
-
+from sys import argv
+from os import path
 save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
 load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
-myfile = 'add_item.json'
 
+obj = []
 
-if (path.exists(myfile)):
-    mylist = load_from_json_file(myfile)
-else:
-    mylist = []
+if (path.exists('add_item.json')):
+    obj = load_from_json_file('add_item.json')
 
 for i in range(1, len(argv)):
-    mylist.append(argv[i])
-
-save_to_json_file(mylist, myfile)
+    obj.append(argv[i])
+save_to_json_file(obj, 'add_item.json')
