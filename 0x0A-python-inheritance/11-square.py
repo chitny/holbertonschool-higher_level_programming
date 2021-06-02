@@ -8,9 +8,9 @@ class Square(Rectangle):
     """Description of the class"""
 
     def __init__(self, size):
-        super().__init__(size, size)
         self.__size = size
         self.integer_validator("size", size)
+        super().__init__(size, size)
 
     def __str__(self):
         return str("[Square] {}/{}".format(self.__size, self.__size))
