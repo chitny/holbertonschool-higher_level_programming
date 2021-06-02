@@ -13,4 +13,4 @@ def save_to_json_file(my_obj, filename):
     lo que hace y para que sirve
     """
     with open(filename, mode="w+") as myfile:
-        json.dumps(my_obj, myfile)
+        json.dump(my_obj, myfile)
