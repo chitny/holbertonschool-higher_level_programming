@@ -33,7 +33,7 @@ class Base():
             tosave = "[]"
         else:
             tosave = cls.to_json_string([i.to_dictionary() for i in list_objs])
-
+                for 
         filename = cls.__name__ + ".json"
         with open(filename, "w") as file:
             file.write(tosave)
