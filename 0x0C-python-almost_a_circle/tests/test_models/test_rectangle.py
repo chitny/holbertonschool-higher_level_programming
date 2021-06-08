@@ -19,7 +19,7 @@ class TestRectangle(unittest.TestCase):
     def setUp(self):
         Base._Base__nb_objects = 0
 
-    def test_5-display(self):
+    def test_5(self):
         """
         Test display method
         """
@@ -54,6 +54,5 @@ class TestRectangle(unittest.TestCase):
             sys.stdout.seek(0)
             sys.stdout.truncate(0)
 
-
-if __name__ == '__main__':
-    unittest.main()
+    if __name__ == '__main__':
+        unittest.main()

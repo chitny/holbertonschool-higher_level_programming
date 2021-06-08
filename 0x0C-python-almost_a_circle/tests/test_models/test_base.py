@@ -30,11 +30,10 @@ class TestBase(unittest.TestCase):
         self.assertEqual(b4.id, 0)
         b5 = Base(-10)
         self.assertEqual(b5.id, -10)
-        b6 = Base(3)
-        self.assertEqual(b6.id, 3)
-        b7 = Base()
+        b6 = Base(4)
         self.assertEqual(b6.id, 4)
+        b7 = Base()
+        self.assertEqual(b7.id, 3)
 
-
-if __name__ == '__main__':
-    unittest.main()
+    if __name__ == '__main__':
+        unittest.main()
