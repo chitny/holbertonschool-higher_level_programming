@@ -11,3 +11,6 @@ from models.square import Square
 
 
 class TestBase(unittest.TestCase):
+
+    def setUp(self):
+        Base._Base__nb_objects = 0
