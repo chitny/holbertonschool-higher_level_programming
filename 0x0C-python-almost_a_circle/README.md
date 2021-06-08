@@ -1,6 +1,8 @@
 # Description of this directory!
 
-We are doing this project to practise in Python. In this project, you will review everything about Python:
+We are doing this project to practice concepts that we learn before in Python. 
+
+In this project, you will review this concepts:
 
 - Import
 - Exceptions
