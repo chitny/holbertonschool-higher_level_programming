@@ -19,22 +19,41 @@ class TestRectangle(unittest.TestCase):
     def setUp(self):
         Base._Base__nb_objects = 0
 
-    def test_1(self):
-        """create an instance and check id."""
+    def test_5-display(self):
+        """
+        Test display method
+        """
+        Base._Base__nb_objects = 0
+        r1 = Rectangle(2, 4)
+        result1 = "##\n" \
+            "##\n" \
+            "##\n" \
+            "##\n"
+        r2 = Rectangle(2, 3)
+        result2 = "##\n" \
+            "##\n" \
+            "##\n"
+        r3 = Rectangle(1, 1)
+        result3 = "#\n" \
+                try:
+            r1.display()
+            self.assertEqual(sys.stdout.getvalue(), result1)
+        finally:
+            sys.stdout.seek(0)
+            sys.stdout.truncate(0)
+        try:
+            r2.display()
+            self.assertEqual(sys.stdout.getvalue(), result2)
+        finally:
+            sys.stdout.seek(0)
+            sys.stdout.truncate(0)
+        try:
+            r3.display()
+            self.assertEqual(sys.stdout.getvalue(), result3)
+        finally:
+            sys.stdout.seek(0)
+            sys.stdout.truncate(0)
 
-        b0 = Base()
-        self.assertEqual(b0.id, 1)
-        b1 = Base()
-        self.assertEqual(b1.id, 2)
-        b2 = Base(24)
-        self.assertEqual(b2.id, 24)
-        b3 = Base(1024)
-        self.assertEqual(b3.id, 1024)
-        b4 = Base(0)
-        self.assertEqual(b4.id, 0)
-        b5 = Base(-10)
-        self.assertEqual(b5.id, -10)
-        b6 = Base(3)
-        self.assertEqual(b6.id, 3)
-        b7 = Base()
-        self.assertEqual(b6.id, 4)
+
+if __name__ == '__main__':
+    unittest.main()
