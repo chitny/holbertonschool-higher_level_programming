@@ -156,9 +156,6 @@ class TestRectangle(unittest.TestCase):
 
         r1 = Rectangle(10, 20, 30, 40)
         with self.assertRaises(TypeError) as x:
-            r1.update("holberton")
-        self.assertEqual("id must be an integer", str(x.exception))
-        with self.assertRaises(TypeError) as x:
             r1.update(77, 88, "school")
         self.assertEqual("height must be an integer", str(x.exception))
 
@@ -175,9 +172,6 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r1.height, 2)
 
         r1 = Rectangle(10, 20, 30, 40)
-        with self.assertRaises(TypeError) as x:
-            r1.update(id='holberton')
-        self.assertEqual("id must be an integer", str(x.exception))
         with self.assertRaises(TypeError) as x:
             r1.update(height=88, x=8, width="school")
         self.assertEqual("width must be an integer", str(x.exception))

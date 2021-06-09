@@ -15,14 +15,14 @@ class TestSquare(unittest.TestCase):
     def test_10(self):
         """Test Square class: check for attributes."""
 
-        s0 = Square(8)
-        self.assertEqual(s0.id, 8)
+        s0 = Square(3)
+        self.assertEqual(s0.id, 3)
         s1 = Square(8, 1, 4)
         self.assertEqual(s1.height, 8)
         self.assertEqual(s1.width, 8)
         self.assertEqual(s1.x, 1)
         self.assertEqual(s1.y, 4)
-        self.assertEqual(s1.id, 8)
+        self.assertEqual(s1.id, 4)
 
         s1 = Square(9, 8, 7, 6)
         self.assertEqual(str(s1), "[Square] (6) 8/7 - 9")
@@ -51,7 +51,7 @@ class TestSquare(unittest.TestCase):
         with contextlib.redirect_stdout(f):
             s3.display()
         s = f.getvalue()
-        res = "#######\n#######\n#######\n#######\n"
+        res = "#######\n#######\n#######\n#######\n#######\n#######\n#######\n"
         self.assertEqual(s, res)
 
     def test_11(self):
@@ -105,9 +105,6 @@ class TestSquare(unittest.TestCase):
         with self.assertRaises(TypeError) as x:
             s1.update(1, 2, 3, "hello")
         self.assertEqual("y must be an integer", str(x.exception))
-        with self.assertRaises(TypeError) as x:
-            s1.update("hello", 4, 5)
-        self.assertEqual("id must be an integer", str(x.exception))
 
     def test_14(self):
         """Test for public method to_dictionary."""
